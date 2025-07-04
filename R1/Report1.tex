@@ -1,0 +1,141 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx, setspace, array, xcolor
+, mathtools, contour, tikz, amsthm, setspace, amsmath,amsfonts,amssymb, subcaption, fancyhdr, lipsum,multicol, amsthm}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=2cm]{geometry}
+\usepackage{colortbl}
+\contourlength{0.5pt}
+\usetikzlibrary{patterns}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\thesection}{$\diamond$}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Linear Algebra}
+\title{Linear Algebra}
+\author{Report 1\\ \\ Yousef A. Abood\\ \\ ID: 900248250}
+\date{June 2025}
+\setlength{\parindent}{0pt}
+\singlespacing
+\parskip=1mm
+\onehalfspacing
+\begin{document}
+\maketitle
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\section{Upper triangular matrix}
+A matrix is called upper triangular iff every entry below the main diagonal is zero. So if a matrix $K=[k_{ij}]$ is upper triangular, then every entry $k_{ij}$ is zero when $i>j$.
+\begin{multicols}{2}
+\subsubsection*{Example}
+$\begin{bmatrix}
+  1 & 2 & 3 \\
+  0 & 4 & 5 \\
+  0 & 0 & 6
+\end{bmatrix},$
+
+\subsubsection*{Non-example}
+$\begin{bmatrix}
+  1 & 2 & 3 \\
+  7 & 4 & 5 \\
+  8 & 9 & 6
+\end{bmatrix}.$
+\end{multicols}
+\section{Scalar multiplication of matrices
+}
+let $A=[a_{ij}]$ be a matrix of size $m\times n$, where $m,n \in \mathbb{Z}$ and let $c$ be a real number. The Scalar multiple of $A$ by $c$ is the $m \times n$ matrix $cA$ obtained by multiplying every entry of the matrix $A$ by $c$.
+\subsubsection*{Example}
+$ A=\begin{bmatrix}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & 0 & 1
+\end{bmatrix},
+5A= \begin{bmatrix}
+  5 & 0 & 0 \\
+  0 & 5 & 0 \\
+  0 & 0 & 5
+\end{bmatrix}.$\\ \\
+\textcolor{red}{* Non-example cannot be found.}
+\section{Skew-symmetric matrix}
+A square matrix $A=[a_{ij}]$ is called \textit{skew-symmetric matrix} iff $A=-A^{T}$. In other words $a_{ij}=-a_{ji}$ for every $1 \leq i,j \leq n$, which forces the main diagonal entries to be zeros.
+\begin{multicols}{2}
+\subsubsection*{Example}
+$\begin{bmatrix}
+  0 & 5 & 4 \\
+  -5 & 0 & 3 \\
+  -4 & -3 & 0
+\end{bmatrix},$
+\subsubsection*{Non-example}
+$\begin{bmatrix}
+  1 & 2 & 3 \\
+  2 & 4 & 5 \\
+  3 & 5 & 6
+\end{bmatrix}.$
+\end{multicols}
+\section{A solution of a linear equation in 3 variables 
+}
+A solution of a linear equation in 3 variables is a sequence of three real numbers $(s_1,s_2,s_3)$ which satisfy the equation when the number $s_i$ is substituted for the variable $x_i$, for every $1 \leq i \leq 3$.
+  \subsubsection*{Example}
+The sequence $(1, 1, 1)$ is a solution for the system of equations : $x+y+z=3.$\\
+\textcolor{red}{The sequence $(0,0,0)$ is a Non-example as it does not satisfy the equation.}
+\section{Row-equivalent matrices}
+A matrix $A$ is called $row \; equivalent$ to a matrix $B$ if and only if $B$ is obtained from $A$ by applying finitely many elementary row operations on $A$.
+\subsubsection*{Example}
+$
+  A= \begin{bmatrix}
+    7 & 12 & 5 \\
+    8 & 14 & 7 \\
+    1 & 9 & 3
+  \end{bmatrix} \xrightarrow{{(R_1-R_3)}\to{R_1}} \begin{bmatrix}
+    6 & 3 & 2 \\
+    8 & 14 & 7 \\
+    1 & 9 & 3
+  \end{bmatrix} = B.
+$
+\\ \\ $A$ and $B$ are row equivalent.
+\subsubsection*{Non-example}
+$
+A= \begin{bmatrix}
+    7 & 12 & 5 \\
+    8 & 14 & 7 \\
+    1 & 9 & 3
+  \end{bmatrix}. B=\begin{bmatrix}
+    0 & 0 & 0 \\  
+    0 & 0 & 0 \\
+    0 & 0 & 0
+  \end{bmatrix}.
+$ 
+\\ \\ $A$ and $B$ are not row equivalent.
+\section{A matrix in row-echelon form}
+A matrix $A$ is in row-echelon form iff it satisfies the three following conditions :
+\begin{itemize}
+  \item [(i)] All rows consisting entirely of zeros occur at the bottom of the matrix.
+  \item [(ii)] The first nonzero entry of each row is 1. (called the leading 1 or the pivot, and we call the column that has a leading 1, a pivot column.)
+  \item [(iii)] Any leading 1 is farther to the right than the leading 1 in the row above.
+\end{itemize}
+
+\begin{multicols}{2}
+  \subsubsection*{Example}
+  $
+  A=\begin{bmatrix}
+    1 & 5 & 8 \\
+    0 & 1 & 6 \\
+    0 & 0 & 1 \\
+    0 & 0 & 0
+  \end{bmatrix}
+  $
+  \subsubsection*{Non-example}
+  $B=\begin{bmatrix}
+    1 & 5 & 8 \\
+    0 & 1 & 6 \\
+    0 & 1 & 1 \\
+    0 & 0 & 0
+  \end{bmatrix}$
+\end{multicols}
+
+\begin{multicols}{2}
+  $A$ is in row-echelon form. \\
+  $B$ is not in row-echelon form.
+\end{multicols}
+\end{document}

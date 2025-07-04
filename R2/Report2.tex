@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx, setspace, array, xcolor
+, mathtools, contour, tikz, amsthm, setspace, amsmath,amsfonts,amssymb, subcaption, fancyhdr, lipsum,multicol, amsthm}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=2cm]{geometry}
+\usepackage{colortbl}
+\contourlength{0.5pt}
+\usetikzlibrary{patterns}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\thesection}{$\diamond$}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Linear Algebra}
+\title{Linear Algebra}
+\author{Report 2\\ \\ Yousef A. Abood\\ \\ ID: 900248250}
+\date{June 2025}
+\setlength{\parindent}{0pt}
+\singlespacing
+\parskip=1mm
+\onehalfspacing
+\begin{document}
+\maketitle
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\section{Invertible matrix}
+A square matrix $A$ of size $n \times n$ is called invertible iff we can find another matrix $B$ such that $AB=I_{n} \text{ and } BA=I_{n}.$ We call $B$ the inverse of $A$ and we denote it by $A^{-1}.$
+\\ \textcolor{red}{*When a matrix is row equivalent to a matrix with row or column of zeros then it is noninvertible matrix.}
+\subsubsection*{Example}
+$\left [ \begin{array}{ccc}
+        1&2&5\\
+        5&6&10\\
+        11&12&22
+    \end{array}\right ]\left [ \begin{array}{ccc}
+        0&2&-2\\
+        -1&\frac{7}{2}&\frac{-3}{2}\\
+        \frac{1}{3}&\frac{-5}{3}&\frac{2}{3}
+    \end{array}\right ]=\left [ \begin{array}{ccc}
+        1&0&0\\
+        0&1&0\\
+        0&0&1
+    \end{array}\right ] \\ \\ AB=I_{n}.$
+    \subsubsection*{Non-example}
+    $A=\left [ \begin{array}{ccc}
+        1&2&3\\
+        5&6&7\\
+        10&12&14
+    \end{array}\right ] \xrightarrow{{(R_3-2R_2)}\to{R_3}}\left [ \begin{array}{ccc}
+        1&2&3\\
+        5&6&7\\
+        0&0&0
+    \end{array}\right ].$\\
+    \textcolor{red}{$A$ is noninvertible matrix.}
+\section{Elementry matrix}
+A square matrix $A$ of size $n \times n$ is called elementary iff it can be obtained from the identity matirx by applying exactly one elementary row operation.
+    \subsubsection*{Example}
+        $\left [ \begin{array}{ccc}
+        1&0&0\\
+        0&1&0\\
+        0&0&1
+    \end{array}\right ] \xrightarrow{{(R_3-5R_2)}	\to{R_3}} \left [ \begin{array}{ccc}
+        1&0&0\\
+        0&1&0\\
+        0&-5&1
+    \end{array}\right ] =A,$ an elementary matrix.
+
+\subsubsection*{Example}
+        $\left [ \begin{array}{ccc}
+        1&0&0\\
+        0&1&0\\
+        0&0&1
+    \end{array}\right ] \xrightarrow{{(R_3-5R_2)}	\to{R_3}} \left [ \begin{array}{ccc}
+        1&0&0\\
+        0&1&0\\
+        0&-5&1
+    \end{array}\right ] \xrightarrow{{R_2\leftrightarrow R_1}} \left [ \begin{array}{ccc}
+        0&1&0\\
+        1&0&0\\
+        0&-5&1
+    \end{array}\right ]= B,$ not an elementary matrix.
+\section{Determinant of a matrix}
+The determinant is a function that assaigns to every square matrix $A$ a real number \\denoted by $det(A)$ or $|A|$. For a $1 \times 1$ matrix, we define $det([a])=a.$ The determinant of an $n\times n$ matrix, where $n \geq 2$, is the sum of the products of the entries of the first row with their corresponding cofactors.\\
+\[det(A)=\sum_{j=1}^{n}(-1)^{1+j}a_{1j}det(A_{1j})=\sum_{j=1}^{n}a_{1j}C_{1j}=a_{11}C_{11}+a_{12}C_{12}+...+a_{1n}C_{1n}.\]
+\subsubsection*{Example}
+\[
+A=\left [\begin{array}{ccc}
+    9&11&13\\
+    17&19&23\\
+    29&31&37
+\end{array} \right ].\] \\ \[det(A) =\left |\begin{array}{ccc}
+    9&11&13\\
+    17&19&23\\
+    29&31&37
+\end{array} \right |= 9 \left |\begin{array}{ccc}
+       19 &23\\
+        31&37
+\end{array}\right |- 11 \left |\begin{array}{ccc}
+       17 &23\\
+        29&37
+\end{array}\right |+ 13 \left |\begin{array}{lll}
+       17 &19\\
+        29&31
+\end{array}\right |=-90+418-312=16.
+\]
+\textcolor{red}{* A nonexample cannot be found.}
+\end{document}
