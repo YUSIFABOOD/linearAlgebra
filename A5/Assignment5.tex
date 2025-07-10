@@ -31,22 +31,86 @@
 % 13, 15, 17, 19, 22, 24, 26, 31, 32, 34, 36, 37, 38, 41a
 \subsection{Vectors in $R^n$}
 \subsubsection*{Problem 24}
+$u=(1, 2, 3), v=(2, -2, -1), w=(4, 0, -4).\\
+2u+v-w+3z=\textbf{0}
+     =(0, 0, 0).$
+\begin{align*}
+2u+v-w &\iff \textbf{0}-3z\\
+       &\iff \textbf{0}+(-3z)\\
+       &\iff -3z.\\
+&\iff \frac{-1}{3}(2u+v-w)=\frac{-1}{3}(-3z)\\
+&\iff \frac{-1}{3}(2u+v-w)=z.\\
+&\iff z=\frac{-1}{3}(2(1,2,3)+(2,-2,1)+(-1)(4,0,-4)) \\
+&\hspace{1.5cm}= \frac{-1}{3}((2,4,6)+(2,-2,-1)-(4,0,-4))\\
+&\hspace{1.5cm}=\frac{-1}{3}(2+2+4,4-2,6-1-4)\\
+&\hspace{1.5cm}=\frac{-1}{3}(10,2,1)=(\frac{-10}{3},\frac{-2}{3},\frac{-1}{3}).
+\end{align*}
 \subsubsection*{Problem 27}
+\begin{itemize}
+    \item [a)] \textcolor{darkgreen}{It is a scalar multiple of $z$.} $v=\frac{3}{2}z=\frac{3}{2}(3,2,-5)=(\frac{9}{2},3,\frac{-15}{2}).$
+    \item [b)] \textcolor{red}{No, it is not a scalar multiple of $z$.} The ratio is different between $\frac{9}{3}=3, \frac{-6}{2}=-3.$
+\end{itemize}
 \subsubsection*{Problem 34}
 \begin{itemize}
-    \item [b)]
+    \item [b)] $2w-\frac{1}{2}u=2(2,-2,1,3)-\frac{1}{2}(1,2,-3,1) = (4,-4,2,6)-(\frac{1}{2},1,\frac{-3}{2},\frac{1}{2})=(\frac{7}{2},-5,\frac{7}{2},\frac{11}{2}).$
 \end{itemize}
 \subsection{Vector Spaces}
 \subsubsection*{Problem 13}
+\begin{proof}
+ Suppose $A,B$ are matrices of size $4 \times 6$. By definition of matrix addition, $A+B=C$ is also of size $4\times 6$, so the addition is closed (1). We also know $A+B=[a_{ij}]+[b_{ij}]=[a_{ij}+b_{ij}]=[b_{ij}+a_{ij}]=B+A,$ clearly commutative (2). Suppose another matrix $D$ of the same size. By associativity of real numbers, $A+B+D=[a_{ij}]+[b_{ij}]+[d_{ij}]=[a_{ij}+b_{ij}+d_{ij}]=[a_{ij}+(b_{ij}+d_{ij})]=[(a_{ij}+b_{ij})+d_{ij}]=A+(B+D)=(A+B)+D,$ we can see addition here is associative (3). We observe that $\textbf{0}_{4\times 6}$ is the additive identity as $A+\textbf{0}_{4\times 6}=A$. (4). The fifth axioms holds as $A-A=A+(-A)=[a_{ij}-a_{ij}]=\textbf{0}_{4\times 6}.$ (5). By definition of matrix scalar multiplication, suppose $c,k \in \mathbb{R}$, and $A,B$ are matrices of size $4 \times 6$, then $(cA)$ is a matrix of size $4 \times 6$ and scalar multiplication is closed (6), it also implies that $c(A+B)=c[a_{ij}+b_{ij}]=[ca_{ij}+cb_{ij}]=[ca_{ij}]+[cb_{ij}]=cA+cB$ (7), and $(c+k)A=(c+k)[a_{ij}]=[(c+k)a_{ij}]=[ca_{ij}+ka_{ij}]=cA+kA$ (8). We also have $cdA=c(dA)=(cd)A$ by scalar multiplication of matrices (9). It is obvious that $1A=A$ (10). Hence, \textcolor{darkgreen}{It is a vector space.}   
+\end{proof}
 \subsubsection*{Problem 15}
+It is not a vector space as $x^3+5x^2+(-1)(x^3)=x^3+5x^2-x^3=5x^2$, clearly not closed under addition as we can see the result is a polynomial of degree 2.
 \subsubsection*{Problem 17}
+It is not a vector space, take $p(x)=x$ and take $q(x)=-x$, then $p(x)+q(x)=x-x=0$ wich is not in the set. Hence, the set is not closed under addition.
 \subsubsection*{Problem 19}
+As stated in the lecture notes, the set $\mathcal{P}_n$ of all polynomials of degree n or less is a vector space under polynomial addition and scalar multiplication. Therefore, the set of all polynomials of degree four or less is a vector space.
 \subsubsection*{Problem 22}
+It is not a vector space, take the pair $(1,1)$. Observe $(-1)(1,1)=(-1,-1)$, clearly not closed under scalar multiplication.
 \subsubsection*{Problem 24}
+\textcolor{darkgreen}{It is a vector space.}\\
+(1),(2) Choose $x$ to be $a,b$, where $a,b \in \mathbb{R}$. We observe $(a, \frac{1}{2}a)+(b,\frac{1}{2}b)=(a+b, \frac{1}{2}a+\frac{1}{2}b)=(a+b, \frac{1}{2}(a+b))=(b+a, \frac{1}{2}(b+a))$, clearly closed under addition and it satisfies the commutativity of addition.\\
+(3) Choose $a,b,c$, where $a,b,c \in \mathbb{R}.$ Then $(a,\frac{1}{2}a)+(b,\frac{1}{2}b)+(c,\frac{1}{2}c)=(a,\frac{1}{2}a)+(b+c,\frac{1}{2}(b+c))=(a+b,\frac{1}{2}(a+b))+(c,\frac{1}{2}c)$, satisfies the addition associativity.\\
+(4),(5) It is clear that $(0,\frac{1}{2} (0))=(0,0)$ is the additive identity, and $(-a,\frac{1}{2}(-a))$ is the additive inverse, where $a\in \mathbb{R}$. \\
+(6),(7) Choose $k,d$ to be real numbers scalars. See that $c(a,\frac{1}{2})=(ca,\frac{c}{2}a)=(ca,\frac{1}{2}(ca)),$ and $c((a,\frac{1}{2}a)+(b,\frac{1}{2}b))=c(a+b,\frac{1}{2}(a+b))=(c(a+b),\frac{1}{2}c(a+b))=(ca+cb,\frac{1}{2}(ca+cb))=(ca,\frac{c}{2}a)+(cb,\frac{c}{2}b).$
 \subsubsection*{Problem 26}
+\textcolor{red}{It is not a vector space.}\\ Suppose $A$ is a matrix of the form $\begin{bmatrix}
+   a& b \\
+   c& 1
+\end{bmatrix}$, we get a matrix $\begin{bmatrix}
+  a+a & b+b \\
+   c+c & 2
+\end{bmatrix}$ when we add $A$ to itself, clearly it is not closed ander addition.
 \subsubsection*{Problem 31}
+\textcolor{red}{It is not a vector space.}\\ Choose two singular matrices $\begin{bmatrix}
+  1 & 0 \\
+  0 & 0
+\end{bmatrix}, \begin{bmatrix}
+  0 & 0 \\
+  0 & 1
+\end{bmatrix}$. Adding them, we get $\begin{bmatrix}
+  1 & 0 \\
+  0 & 1
+\end{bmatrix}$, which is the identity matrix, and we know the identity matrix is invertible, clearly not closed under addition.
 \subsubsection*{Problem 32}
+\textcolor{red}{It is not a vector space.}\\ Choose two invertible matrices $\begin{bmatrix}
+  1 & 0 \\
+  0 & 1
+\end{bmatrix}, \begin{bmatrix}
+  -1 & 0 \\
+  0 & 1
+\end{bmatrix}$. Adding them, we get $\begin{bmatrix}
+  0 & 0 \\
+  0 & 2
+\end{bmatrix}$, which is a singular matrix, clearly not closed under addition.
+
 \subsubsection*{Problem 34}
+Suppose $A,B$ are upper triangular square matrices of size 3, and $c,k$ are real numbers.\\
+(1),(2),(6) From matrix addition and scalar multiplication, we know $A+B$ and $cA$ are upper triangular square matrices of size 3, clearly closed under addition and scalar multiplication. We also know $A+B=B+A$, which satisfies addition commutativity.\\
+(3),(7) Suppose $D$ an upper triangular square matrix of size 3. By matrix addtion, we know $(A+B)+D=A+(B+D)$. We also know that $c(A+B)=cA+cB.$\\
+(4),(5),(10) We clearly see that the zero square matrix of size 3 is an additive identity in this set, and the additive inverse of any matrix $A$ is $-A$ such that $A+(-A)=\textbf{0}_{3\times 3}$. $1A=A$ is obviously satisfied for any matrix.\\
+(8) We observe $(c+k)=A=(c+k)[a_{ij}]=[(c+k)a_{ij}]=[ca_{ij}+ka_{ij}]=c[a_{ij}]+k[a_{ij}]=cA+kA.$\\
+(9) Finally, observe $(ck)A=ck[a_{ij}]=c[ka_{ij}]=c(kA).$
 \subsubsection*{Problem 36}
 \subsubsection*{Problem 37}
 \subsubsection*{Problem 38}
