@@ -72,7 +72,9 @@ It is not a vector space, take the pair $(1,1)$. Observe $(-1)(1,1)=(-1,-1)$, cl
 (1),(2) Choose $x$ to be $a,b$, where $a,b \in \mathbb{R}$. We observe $(a, \frac{1}{2}a)+(b,\frac{1}{2}b)=(a+b, \frac{1}{2}a+\frac{1}{2}b)=(a+b, \frac{1}{2}(a+b))=(b+a, \frac{1}{2}(b+a))$, clearly closed under addition and it satisfies the commutativity of addition.\\
 (3) Choose $a,b,c$, where $a,b,c \in \mathbb{R}.$ Then $(a,\frac{1}{2}a)+(b,\frac{1}{2}b)+(c,\frac{1}{2}c)=(a,\frac{1}{2}a)+(b+c,\frac{1}{2}(b+c))=(a+b,\frac{1}{2}(a+b))+(c,\frac{1}{2}c)$, satisfies the addition associativity.\\
 (4),(5) It is clear that $(0,\frac{1}{2} (0))=(0,0)$ is the additive identity, and $(-a,\frac{1}{2}(-a))$ is the additive inverse, where $a\in \mathbb{R}$. \\
-(6),(7) Choose $k,d$ to be real numbers scalars. See that $c(a,\frac{1}{2})=(ca,\frac{c}{2}a)=(ca,\frac{1}{2}(ca)),$ and $c((a,\frac{1}{2}a)+(b,\frac{1}{2}b))=c(a+b,\frac{1}{2}(a+b))=(c(a+b),\frac{1}{2}c(a+b))=(ca+cb,\frac{1}{2}(ca+cb))=(ca,\frac{c}{2}a)+(cb,\frac{c}{2}b).$
+(6),(7),(8) Choose $k,d$ to be real numbers scalars. See that $c(a,\frac{1}{2})=(ca,\frac{c}{2}a)=(ca,\frac{1}{2}(ca)),$ and $c((a,\frac{1}{2}a)+(b,\frac{1}{2}b))=c(a+b,\frac{1}{2}(a+b))=(c(a+b),\frac{1}{2}c(a+b))=(ca+cb,\frac{1}{2}(ca+cb))=(ca,\frac{c}{2}a)+(cb,\frac{c}{2}b).$
+We can also see $(c+d)(a,\frac{1}{2}a)=((c+d)a,\frac{(c+d)}{2}a)=(ca+da,\frac{c}{2}a+\frac{d}{2}a)=(ca,\frac{c}{2}a)+(da,\frac{d}{2}a).$\\
+(9) It is clear that $(cd)(a,\frac{1}{2}a)=c(da,\frac{d}{2}a)$, and $1(a,\frac{1}{2}a)=(a,\frac{1}{2}a).$
 \subsubsection*{Problem 26}
 \textcolor{red}{It is not a vector space.}\\ Suppose $A$ is a matrix of the form $\begin{bmatrix}
    a& b \\
@@ -105,6 +107,7 @@ It is not a vector space, take the pair $(1,1)$. Observe $(-1)(1,1)=(-1,-1)$, cl
 \end{bmatrix}$, which is a singular matrix, clearly not closed under addition.
 
 \subsubsection*{Problem 34}
+\textcolor{darkgreen}{It is a vector space.}\\
 Suppose $A,B$ are upper triangular square matrices of size 3, and $c,k$ are real numbers.\\
 (1),(2),(6) From matrix addition and scalar multiplication, we know $A+B$ and $cA$ are upper triangular square matrices of size 3, clearly closed under addition and scalar multiplication. We also know $A+B=B+A$, which satisfies addition commutativity.\\
 (3),(7) Suppose $D$ an upper triangular square matrix of size 3. By matrix addtion, we know $(A+B)+D=A+(B+D)$. We also know that $c(A+B)=cA+cB.$\\
@@ -112,7 +115,12 @@ Suppose $A,B$ are upper triangular square matrices of size 3, and $c,k$ are real
 (8) We observe $(c+k)=A=(c+k)[a_{ij}]=[(c+k)a_{ij}]=[ca_{ij}+ka_{ij}]=c[a_{ij}]+k[a_{ij}]=cA+kA.$\\
 (9) Finally, observe $(ck)A=ck[a_{ij}]=c[ka_{ij}]=c(kA).$
 \subsubsection*{Problem 36}
+\textcolor{darkgreen}{It is a vector space.}\\
+Suppose $f(x),g(x)$ to be a continous functions defined on the interval [-1,1]. It is clear that this set is a subset of the set of continous real valued functions, which we proved it is a vector space in class. 
+Since booth $f,g$ are defined on the interval, and by what we defined in class, $(f+g)(x)=f(x)+g(x)$ and $(cf)(x)=c(f(x)).$ It is clear that it is closed under addition and scalar multiplication. It is also non empty as this set includes the zero function. So, it passes the subspace test. Hence, the set of all continous functions defined on interval $[-1,1]$ is a vector space. \\
+
 \subsubsection*{Problem 37}
+
 \subsubsection*{Problem 38}
 \subsubsection*{Problem 41}
 \begin{itemize}
