@@ -120,10 +120,17 @@ Suppose $f(x),g(x)$ to be a continous functions defined on the interval [-1,1]. 
 Since booth $f,g$ are defined on the interval, and by what we defined in class, $(f+g)(x)=f(x)+g(x)$ and $(cf)(x)=c(f(x)).$ It is clear that it is closed under addition and scalar multiplication. It is also non empty as this set includes the zero function. So, it passes the subspace test. Hence, the set of all continous functions defined on interval $[-1,1]$ is a vector space. \\
 
 \subsubsection*{Problem 37}
-
+\textcolor{darkgreen}{It is a vector space.}
+Suppose $a,b$ are positive real numbers. By definition, their addition is $ab$, which is a positive real number, clearly closed under addition (1). We can also see it satisfies commutativity of addition as $b+a=ba=ab=a+b.$ (2).\\
+Suppose another real number $c$. By definition $c+a+b=c(ab)=c+(a+b)=(ca)b=(c+a)+b$, clearly satisfies the associativity (3).\\
+We find $a+1=a(1)=a,$ clearly the additive identity (4). And the additive inverse is clearly $0$ as $0+a=(0)a=0$ (5).\\
+(6) By definition of scalar multiplication, suppose $c$ a real number, then $ca=a^c$, clearly a positive real number. Hence, it is closed under scalar multiplication. For (7), suppose $c,d$ are scalars and $a,b$ are positive real nubmers, then $c(a+b)=(a+b)^c=(ab)^c=a^c b^c=ca+cb.$ And for (8), suppose $c,d$ are scalars, then $(c+d)a=a^{c+d}=a^c*a^d=ca+da.$\\
+(9) Suppose $c,d$  are real scalars, then $(cd)a=a^{(cd)}=(a^c)^d=d(a^c)=d(ca).$ The last one is also satisfied as $a^1$ is $a$.
 \subsubsection*{Problem 38}
+Suppose the pairs $(x,y),(a,b)$ where $x,y$ are real numbers. We can see it is clearly closed under addition and scalar multiplication as $(x,y)+(a,b)=(xa,yb),$ and $c(x,y)=(cx,cy).$ Its additiion is also commutative as $(a,b)+(x,y)=(ax,by)=(xa,yb)=(x,y)+(a,b).$ Suppose another pair $(n,m)$, where n,m are real numbers. We observe that $(a,b)+(n,m)+(x,y) = (anx,bmy)=(a(nx),b(my))=(a,b)+(nx,my)=(a,b)+((n,m)+(x,y))=((an)x,(bm)y)=(an,bm)+(x,y)=((a,b)+(n,m))+(x,y).$ We notice that $(1,1)$ is the additive identity (The zero vector) as $(1,1)+(a,b)=(a(1),b(1))=(a,b).$ For the additive inverse, we need to find a pair (x,y) such that $(a,b)+(x,y)=(1,1)$ so $x=\frac{1}{a}$ and $y=\frac{1}{b}$,  which will not hold if $a,b$ are zeros. So, it does not satisfy the axiom of additive inverse.
+It fails for distributivity of scalar multiplication of vector addition as we observe $c((a,b)+(x,y))=(cax,cby)$ will equal $(ca,cb)+(cx,cy)=(c^2xa,c^2by).$ only if $c=c^2$, which will only hold if $c=0, c=1$ but we defined $c$ to be any real number. It also fails for axiom (8) as $(c+d)(x,y)=((c+d)x,(c+d)y)$, but $c(x,y)+d(x,y)=(cdx^2,cdy^2)$, clearly they are not equal, for example, let $c=2,d=3, (1,1)$. After substituting in the previous equations, we get that $(5,5)\neq (6,6)$.
 \subsubsection*{Problem 41}
 \begin{itemize}
-    \item [a)]
+    \item [a)] Suppose $c,d$ are real numbers, and the pair $(x,y)$ such that $x,y \in \mathbb{R}$. We see $(c+d)(x,y)=((c+d)x,y)$ but $c(x,y)+d(x,y)=((c+d)x,2y)$, clearly it fails to satisfy axiom (8). Hence, \textcolor{red}{it is not a vector space.}
 \end{itemize}
 \end{document}
