@@ -26,7 +26,48 @@
 \maketitle
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 \section{Vector Space}
+A vector space over the the field of real numbers is a set $V$, whose members are called $vectors,$ together with two operations:
+\begin{itemize}
+    \item Vector addition that takes two vectors $\vec{v}$ and $\vec{u}$ from $V$ and produce a third vector denoted by $\vec{u}+\vec{v}$.
+    \item Scalar multiplication that takes a scalar $c \in \mathbb{R}$ and a vector $\vec{u}\in V,$ and produces a new vector denoted by $c\vec{v}.$
+\end{itemize}
+which satisfy the following axioms, which called \textit{vector space axioms}:
+\begin{itemize}
+    \item [(1)] Closure of vector addition.\\ For every $\vec{u},\vec{v} \in V$, we have $\vec{u}+\vec{v}\in V.$
+    \item [(2)] Commutativity of vector addition.\\ For every $\vec{u},\vec{v} \in V$, we have $\vec{u}+\vec{v} = \vec{v}+\vec{u}.$
+    \item [(3)] Associativity of vector addition.\\ For every $\vec{v},\vec{u},\vec{w} \in V$, we have $(\vec{v}+\vec{u})+\vec{w}=\vec{v}+(\vec{u}+\vec{w}).$
+    \item [(4)] Existing of additive identity.\\ There exists a vector $\vec{\textbf{0}}\in V$, called the \textit{zero vector}, such that for every $\vec{v}\in V$, we have $\vec{\textbf{0}}+\vec{v}=\vec{v}.$
+    \item [(5)] Existing of additive inverse.\\ There exists a vector $-\vec{v} \in V$, called the \textit{additive inverse,} such that for every $\vec{v} \in v$, we have $\vec{v}+(-\vec{v})=\vec{\textbf{0}}.$
+    \item [(6)] Closure of scalar multiplication.\\ For every $\vec{v} \in V$ and scalar $c \in \mathbb{R},$ we have that $c\vec{v} \in V.$
+    \item [(7)] Distributivity of scalar multiplication over vector addtion. \\ For every $\vec{v},\vec{u} \in V$ and scalar $c \in \mathbb{R},$ we have $c(\vec{v}+\vec{u})=c\vec{v}+c\vec{u}.$
+    \item [(8)] Distributivity of scalar multiplication over field addtion.\\ For every $\vec{v} \in V$ and scalars $c,k \in \mathbb{R}.$ we have $(c+k)\vec{v}=c\vec{v}+k\vec{v}.$
+    \item [(9)] Compatibtility of scalar multiplication with field multiplication.\\ For every $\vec{v}\in V$ and scalars $c,k \in \mathbb{R},$ we have that $(ck)\vec{v}=c(k\vec{v}).$ 
+    \item [(10)] Unarity. For every $\vec{v} \in V,$ we have $1\vec{v}=\vec{v}.$
+\end{itemize}
+\begin{multicols}{2}
+    \subsubsection*{\textcolor{darkgreen}{Example}}
+    The set of all $2 \times 2$ matrices.
+    \subsubsection*{\textcolor{red}{Non-example}}
+    The set of polynomials of degree $5$ only.
+\end{multicols}
 \section{Subspace}
+Suppose we have a vector space $V,$ we call a set $S$ a \textit{subspace} of $V$ iff $S \subseteq V$ and it satisfies the axioms of the vector space under the operations of vector addition and scalar multiplication inherited from $V$.
+    \subsubsection*{\textcolor{darkgreen}{Example}}
+    Let $V$ be the $4-$dimensional space, and let $S$ any $3-$dimensional space that passes through the origin. Then $S$ is a subspace of $V$.
+    \subsubsection*{\textcolor{red}{Non-example}}
+    Let $V$ be the $4-$dimensional space, and let $S$ any $3-$dimensional space that does not pass through the origin. Then $S$ is not a subspace of $V$.
 \section{A spanning set of a vector space V}
+A subset $S=\{\vec{v_1},\vec{v_2},...,\vec{v_k}\}$ is called a spanning set of a vector space $V$ iff we can write every vector in $V$ as a linear combination of the vectors in $S.$
+\begin{multicols}{2}
+    \subsubsection*{\textcolor{darkgreen}{Example}}
+    The set $\{1,x,x^2,x^3\}$ is a spanning set of the space of all polynomials of degree $3$ or less.
+    \subsubsection*{\textcolor{red}{Non-example}}
+    The set $\{(1,0,0), (0,1,0)\}$ is not a spanning set of $\mathbb{R}^3.$
+\end{multicols}
 \section{A linearly independent set}
+A set $S=\{\vec{v_1},\vec{v_2},...,\vec{v_k}\}$ of vectors in a vector space is called \textit{linear independent} iff the vector equation $c_1\vec{v_1}+c_2\vec{v_2}+...+c_k\vec{v_k}=\vec{\textbf{0}}$ has only the trivial solution : $c_1=0,c_2=0,...,c_k=0.$ In other words, if we cannot obtain a vector in the set by a linear combination of the other vectors in the same set then this set is \textit{linear independent}.
+    \subsubsection*{\textcolor{darkgreen}{Example}}
+    The set $\{(1,-1,0), (0,1,1)\}$ is linear independent.
+    \subsubsection*{\textcolor{red}{Non-example}}
+    The set $\{(1,2,3),(5,7,11),(0,-3,-4)\}$ is linear dependent, as $5(1,2,3)-(5,7,11)+(0,-3,-4)=(0,0,0).$
 \end{document}

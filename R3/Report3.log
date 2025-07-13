@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  11 JUL 2025 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  13 JUL 2025 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -660,24 +660,54 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1
 
-{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] (Report3.aux)
+{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+
+
+
+
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
+
+
+
+
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3] (Report3.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18579 strings out of 468220
- 369027 string characters out of 5437745
- 841701 words of memory out of 5000000
- 46774 multiletter control sequences out of 15000+600000
- 633121 words of font info for 65 fonts, out of 8000000 for 9000
+ 18629 strings out of 468220
+ 369916 string characters out of 5437745
+ 850701 words of memory out of 5000000
+ 46813 multiletter control sequences out of 15000+600000
+ 637833 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,87p,511b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report3.pdf (1 page, 45982 bytes).
+ 84i,11n,87p,511b,319s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/yusif/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Report3.pdf (3 pages, 106905 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
