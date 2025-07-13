@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  11 JUL 2025 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  13 JUL 2025 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -656,24 +656,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1
 
-{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] (Assignment6.aux)
+{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (1.40283pt too wide) in paragraph at lines 62--62
+[]\OT1/cmr/m/n/12 We know that $\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@1\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 )$ is a vec-tor space. Pick any two odd func-tions $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2] (Assignment6.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18540 strings out of 468220
- 368237 string characters out of 5437745
- 842099 words of memory out of 5000000
- 46738 multiletter control sequences out of 15000+600000
- 630934 words of font info for 56 fonts, out of 8000000 for 9000
+ 18594 strings out of 468220
+ 369217 string characters out of 5437745
+ 850099 words of memory out of 5000000
+ 46782 multiletter control sequences out of 15000+600000
+ 635950 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,87p,515b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Assignment6.pdf (1 page, 37883 bytes).
+ 84i,11n,87p,588b,329s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Assignment6.pdf (2 pages, 128086 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

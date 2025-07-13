@@ -25,24 +25,51 @@
 \maketitle
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 
-\section*{Section 4.3 Page 173}
+\subsection{Subspaces of Vector Spaces}
 
 \subsubsection*{Problem 4}
-% Solution here
-
+\begin{proof}
+    Suppose $V$ is a vector space. Pick two matrices: \[A=\begin{bmatrix}
+      a & b \\
+      a-2b & 0 \\
+      0 & c
+    \end{bmatrix}, B=\begin{bmatrix}
+      x & y \\
+      x-2y & 0 \\
+      0 & z
+    \end{bmatrix}\]. We see: \[A+B= \begin{bmatrix}
+      a+x & b+y \\
+      a-2b+x-2y & 0 \\
+      0 & c+z 
+    \end{bmatrix} = \begin{bmatrix}
+      (a+x) & (b+y) \\
+      (a+x)-2(b+y) & 0 \\
+      0 & (c+z)
+    \end{bmatrix}\], so the set is closed under addition. Pick a scalar $k \in \mathbb{R}.$ Observe: \[cA= \begin{bmatrix}
+      ka & kb \\
+      k(a-2b) & k(0) \\
+      k(0) & k(c)
+    \end{bmatrix}= \begin{bmatrix}
+      ka & kb \\
+      ka-2(kb) & 0 \\
+      0 & kc
+    \end{bmatrix},\] clearly closed under scalar multiplication. The set is nonempty as it contains the zero matrix $\textbf{0}_{3\times 2}.$ Therefore, the set is a subspace of $M_{32}$
+\end{proof}
 \subsubsection*{Problem 8}
-% Solution here
-
+We see $(2,1,1)+(2,0,0)=(4,1,1),$ so it is not closed under addition.
 \subsubsection*{Problem 24}
-% Solution here
-
+\begin{proof}
+    We know that $C(-\infty, \infty)$ is a vector space. Pick any two odd functions $f(x),g(x) \in C(-\infty, \infty)$. By definition, $(f+g)(x)=f(x)+g(x)$. Observe that by: \[(f+g)(-x)=f(-x)+g(-x)=-f(x)-g(x)=-(f(x)+g(x))=-(f+g)(x)\] We deduce the set is closed under addition.
+    Choose any scalar $c \in \mathbb{R}$. We see $cf(-x)=c(f(-x))=c(-f(x))=-cf(x)$, which clearly implies the set is closed under scalar multiplication. The set is non empty as it contains $f(x)=x^3.$ Therefore, we proved that the set of all odd functions is subspace of the space of the continous functions.
+\end{proof}
 \subsubsection*{Problem 28}
-% Solution here
-
+\begin{proof}
+    Pick any two functions $f(x),g(x) \in C(-\infty, \infty)$ such that $f(0)=1, g(0)=1.$ By definition, we know that $(f+g)(x)=f(x)+g(x),$ so $(f+g)(0)=f(0)+g(0)=1+1=2$, clearly not closed under addition. Hence, the set of all functions such that $f(0)=1$ is not a subspace.
+\end{proof}
 \subsubsection*{Problem 41}
-% Solution here
-
+\begin{proof}
+    Pick two elements $(a,b,ab),(x,y,xy)\in W.$ Observe their addition is $(a+x,b+y, ab+xy).$ We know that $(a+x)(b+y)=ab+ay+xb+xy.$ Let $a=1,b=2,x=3,y=4,$ so $ab+xy=2+12=14$ and $ab+ay+xb+xy=2+4+6+12=24,$ which clearly shows $W$ is not closed under addition. Therefore, we proved that $W$ is not a subspace of $R^3.$
+\end{proof}
 \subsubsection*{Problem 54}
-% Solution here
-
+Pick $x,y \in W$ and a matrix $A=[a_{ij}]$ of size $m \times n$. We know that $A(x+y) = Ax+Ay$ by the left distributivity of matrix multiplication over matrix addition. And we know $Ax=\textbf{0}, Ay=\textbf{0}$, so $Ax+Ay=\textbf{0},$ so it is closed under vector addition. Choose any scalar $c \in \mathbb{R}.$ It is clear that $A(cx)=c(Ax)=c(\textbf{0})=\textbf{0}.$ The set is not empty as it contains the zero matrix of size $n\times 1$. Therefore we proved that $W$ is a subspace of $R^n.$
 \end{document}
