@@ -24,34 +24,87 @@
 \maketitle
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
 
-\section*{Section 4.4 Page 184}
+\subsection{Spanning Sets and Linear Independence}
 
 \subsubsection*{Problem 2}
-% Solution here
 \begin{itemize}
-    \item [d)]
+    \item [d)] \begin{align*}
+        &(1, -5, -5)= a(1,2,-2)+b(2,-1,1)\\
+        \iff& 1=a+2b, -5=2a-b,-5= -2a+b
+    \end{align*}
+We solve this system of equations:
+\begin{align*}
+    \begin{bmatrix}
+        1&2&1\\
+        2&-1&-5\\
+        -2&1&-5
+    \end{bmatrix} \xrightarrow {{(R_2-2R_1)}\to{R_2}}& \begin{bmatrix}
+        1&2&1\\
+        0&-5&-7\\
+        -2&1&-5
+    \end{bmatrix} \xrightarrow{{(R_3+2R_1)}\to{R_3}} \begin{bmatrix}
+        1&2&1\\
+        0&-5&-7\\
+        0&5&-3
+    \end{bmatrix}\\ \xrightarrow  {{(\frac{-1}{5})R_2}\to{R_2}}& \begin{bmatrix}
+        1&2&1\\
+        0&1&\frac{7}{5}\\
+        0&5&-3
+    \end{bmatrix} \xrightarrow{{(R_3-5R_2)}\to{R_3}} \begin{bmatrix}
+        1&2&1\\
+        0&1&\frac{7}{5}\\
+        0&0&-10
+    \end{bmatrix}.
+\end{align*}
+From the last step we get $0a+0b=10.$ So the system has no solution and the vector $u$ cannot be written as linear combination of vectors in $S.$
 \end{itemize}
 \subsubsection*{Problem 23}
-% Solution here
-
+Let $\vec{v}=(a,b,c)\in R^3$.\\ We observe if $x(1,-2,0)+y(0,0,1)+z(-1,2,0)=(a,b,c)$ has a unique solution:
+\begin{align*}
+\begin{bmatrix}
+    1&0&-1\\
+    -2&0&2\\
+    0&1&0\\
+\end{bmatrix} \xrightarrow{{(R_2+2R_1)}\to{R_2}} \begin{bmatrix}
+  1 & 0 & -1 \\
+  0 & 0 & 0 \\
+  0 & 1 & 0
+\end{bmatrix}
+\end{align*}
+It has a row of zeros, so it is not invertible and it does not have a unique solution, so this set does not span $R^3.$
 \subsubsection*{Problem 46}
-% Solution here
-
+We see:
+\[2+3x+x^2=6+5x+x^2+2(-2-x).\]
+We could form one of the vectors by a linear combination of the other vector is the same set. So the set is linearly dependent.
 \subsubsection*{Problem 50}
-% Solution here
-
+We see that every $1$ in each matrix corresponds to a zero in the other matrices. Hence, it is impossible to obtain one matrix by a linear combination by the other matrices. So the set is linearly independent.
 \subsubsection*{Problem 57}
-% Solution here
 \begin{itemize}
-    \item [b)]
+    \item [b)] By the equation 
+\[a(t,1,1)+b(1,0,1)+c(1,1,3t)=(0,0,0)\]
+We construct this system of equations:
+\[at+b+c=0,\\ a+c=0,\\ a+b+3tc=0.\]
+We find the values of $t$ that makes the following matrix invertible.
+\begin{align*}
+    \begin{vmatrix}
+      t & 1 & 1 \\
+      1 & 0 & 1 \\
+      1 & 1 & 3t
+    \end{vmatrix} = t(-1)-(3t-1)+(1)=-4t+2.
+\end{align*}
+We see the determinant is not zero when $-4t+2 \neq 0 \iff -4t\neq -2 \iff t \neq \frac{1}{2}.$
+So every other value for $t$ makes this set linearly independent.
 \end{itemize}
 \subsubsection*{Problem 62}
-% Solution here
-
+Attached in the mail (Written in paper.)
 \subsubsection*{Problem 73}
 % Solution here
-
+\begin{proof}
+    Since $S$ is linearly Independent, $au+bv=\vec{0}$ has only the trivial solution. Pick two scalars $x,y \in \mathbb{R}-\{0\}.$ Assume $x(u+v)+y(u-v)=(0,0)$ has other solution than the trivial one. Observe $xu+xv+yu-yv=(0,0)=(x+y)u+(x-y)v.$ But we know ${u,v}$ are linearly independent, so $x+y=0, x-y=0$ and clearly $x=0,y=0.$ which is a contradiction. Hence, the set $\{u+v, u-v\}$ is linearly independent.
+\end{proof}
 \subsubsection*{Problem 75}
-% Solution here
-
+\begin{proof}
+    Let $A$ be a nonsingular matrix of order 3, so $A^{-1}$ exists. Pick scalars $a,b,c \in \mathbb{R}$. We want to prove $aAv_1+bAv_2+cAv_3=\vec{0}.$ only has the trivial solution. Observe that we can multiply both sides by $A^{-1}$ and get $aA^{-1}Av_1+bA^{-1}Av_2+cA^{-1}Av_3=A^{-1}\textbf{0} = av_1+bv_2+cv_3=\textbf{0}.$ But we know $\{v_1,v_2,v_3\}$ is linearly independent, so $a=0,b=0,c=0$ and $\{Av_1,Av_2,Av_3\}$ is also linearly independent.
+\end{proof}
+If $A$ is a singular, the set is not linearly independent. A counter example is the zero matrix $\textbf{0}_{3\times 3}$, which will satisfy the equation for any scalars $a,b,c \in \mathbb{R}$, so the equation will have other solutions than the trivial one and the set is linearly dependent.
 \end{document}
