@@ -1,13 +1,101 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{graphicx, setspace, array, xcolor
-, mathtools, contour, tikz, amsthm, setspace, amsmath,amsfonts,amssymb, subcaption, fancyhdr, lipsum,multicol, amsthm}
-\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=2cm]{geometry}
-\usepackage{colortbl}
-\contourlength{0.5pt}
-\usetikzlibrary{patterns}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\renewcommand{\qedsymbol}{$\blacksquare$}
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx, setspace, array, xcolor, mathtools, contour, tikz, amsthm, setspace, amsmath,amsfonts,amssymb, subcaption, fancyhdr, lipsum,multicol}
+\geometry{a4paper, margin=1in}
+% ===== Define custom colors =====
+\definecolor{defscol}{HTML}{d8f5d1}
+
+% ===== Define theorem-like environment for definitions =====
+\newtcbtheorem[]{mydefinition}{Definition}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+     colbacktitle=defscol!60!white,  % darker green for title
+    colback=defscol!30!white,       % lighter green for body
+    % width=0.8\textwidth,            % 80% of the page width
+    % halign=center,                  % center the entire box
+    boxsep=5pt        
+}{defn}
+
+% ===== Corrected Shortcut Commands =====
+
+% A command for a standard definition.
+% Usage: \defn{Title}{label-key}{Content...}
+\NewDocumentCommand{\defn}{m m +m}{
+    \begin{mydefinition}{#1}{#2}
+        #3
+    \end{mydefinition}
+}
+
+% A command for a definition with an extra note in the title.
+% The note is placed in parentheses after the title.
+% Usage: \defnr{Title}{Note}{label-key}{Content...}
+\NewDocumentCommand{\defnr}{m m m +m}{
+    \begin{mydefinition}{#1 (#2)}{#3}
+        #4
+    \end{mydefinition}
+}
+% =======================================================
+% Code for Theorems with Proofs
+% =======================================================
+
+% Required Packages (make sure these are in your preamble)
+\usepackage{xparse}
+
+% --- 1. Define a color for theorems ---
+\definecolor{thmscol}{HTML}{d7e6ec} % A light blue color
+
+% --- 2. Define the theorem environment style ---
+\newtcbtheorem[number within=section]{mytheorem}{Theorem}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=thmscol!40!white,
+    colback=thmscol!20!white,
+}{thm}
+% Command for a simple theorem
+\NewDocumentCommand{\thm}{m+m}{
+    \begin{mytheorem}{#1}{}
+        #2
+    \end{mytheorem}
+}
+% --- 3. Define the proof environment style ---
+\newenvironment{thmpf}{
+    {\noindent\textbf{Proof.}}
+    \tcolorbox[blanker, breakable, left=5mm, parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+    borderline west={1mm}{0pt}{thmscol!60!white}]
+}{
+    % This adds the black square at the end of the proof
+    \textcolor{thmscol!60!black}{\hbox{}\nobreak\hfill$\blacksquare$}
+    \endtcolorbox
+}
+
+% --- 4. Create the all-in-one command for a theorem with its proof ---
+% Usage: \thmp{Title}{label}{Theorem Content}{Proof Content}
+\NewDocumentCommand{\thmp}{m m +m +m}{
+    \begin{mytheorem}{#1}{#2}
+        #3
+    \end{mytheorem}
+    \begin{thmpf}
+        #4
+    \end{thmpf}
+}
 \renewcommand{\thesection}{$\diamond$}
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 \pagestyle{fancy}
@@ -25,4 +113,33 @@
 \begin{document}
 \maketitle
 \noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\defn{Basis of a vector space}{basis}
+{
+    Let $V$ be any vector space, and $S$ is a subset of that vector space. We call $S$ a basis of a vector space if it is a spanning set of $V$ and is a linearly independent set.
+}
+\subsection*{{Example}}
+An example is the set $S=\{7,3x, 5x^2,x^3\}$, which is a basis of $P_3$.
+\subsection*{\textcolor{red}{Non-example}}
+The set $\{(3,-9,6),(1,0,0),(0,1,0),(0,0,1)\}$ is not linear independent as we can get the first vector by a linear combination of the other vectors. Hence, it is clearly not a basis.
+\defn{Dimension of a vector space}{dim}
+{
+    The dimension of a vector space $V$, denoted by $dim(V)$, is the cardinality of the basis. We also set $dim(\{\vec{\textbf{0}}\})=0.$
+}
+\subsection*{{Example}}
+From the previous example, the dimension of $P_3=dim(P_3)=|S|=4.$
+\defn{Rank of a matrix}{rank}
+{
+    The rank of a matrix $A$, denoted by $rank(A)$, is the dimension of the row space of $A$ or the column space of $A$.
+}
+\subsection*{{Example}}
+Let $A$ be the matrix
+\[\begin{bmatrix}
+    1&2&4&5\\
+    0&1&7&6\\
+    0&0&1&3\\
+    0&0&0&1\\
+    0&0&0&0
+\end{bmatrix},\]
+and we see it is in REF.
+Thus, $R(A)=\{(1,2,4,5),(0,1,7,6),(0,0,1,3),(0,0,0,1)\}$ and $dim(R(A))=4.$ Hence, the rank of the matrix is $rank(A)=4.$ 
 \end{document}
