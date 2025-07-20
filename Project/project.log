@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  19 JUL 2025 02:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  19 JUL 2025 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -644,20 +644,20 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
  (project.aux)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
  (/home/yusif/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count362
@@ -720,11 +720,11 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
  (/home/yusif/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
  (/home/yusif/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -739,31 +739,67 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 138.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 153.
 
 
 [2]
 
 [3]
+<f1.png, id=62, 327.02174pt x 326.4195pt>
+File: f1.png Graphic file (type png)
+<use f1.png>
+Package pdftex.def Info: f1.png  used on input line 314.
+(pdftex.def)             Requested size: 226.48395pt x 226.06645pt.
 
-[4] (project.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<f2.png, id=64, 316.7835pt x 272.217pt>
+File: f2.png Graphic file (type png)
+<use f2.png>
+Package pdftex.def Info: f2.png  used on input line 334.
+(pdftex.def)             Requested size: 226.48395pt x 194.6212pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[4]
+
+[5 <./f1.png> <./f2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+
+ []
+
+
+
+[6]
+
+[7]
+
+[8] (project.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 24813 strings out of 468220
- 523892 string characters out of 5437745
- 1593793 words of memory out of 5000000
- 52923 multiletter control sequences out of 15000+600000
+ 24842 strings out of 468220
+ 524304 string characters out of 5437745
+ 1570964 words of memory out of 5000000
+ 52952 multiletter control sequences out of 15000+600000
  635192 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,7n,105p,629b,1807s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmitt10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on project.pdf (4 pages, 204474 bytes).
+ 98i,11n,105p,629b,1807s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmitt10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on project.pdf (8 pages, 264572 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

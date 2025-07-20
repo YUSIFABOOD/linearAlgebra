@@ -103,7 +103,198 @@ We keep applying the ERO till we reach the REF.
 Since the rows of the matrix are exactly the vectors in $S$, we get that the supspace of $R^3= Span(S)= R(A).$
 Therefore, the set $\{(1,2,4),(0,1,\frac{8}{5}), (0,0,1)\}$ forms a basis for the subspace.
 \subsubsection*{Problem 25}
+\begin{itemize}
+\item[a)] \begin{align*}
+    \begin{bmatrix}
+      2 & 4 & -3 &-6\\
+      7 & 14 & -6 &-3\\
+      -2 & -4 & 1 &-2\\
+      2&4&-2&-2
+    \end{bmatrix} \xrightarrow{{\frac{1}{2}R_1}\to{R_1}}&
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      7 & 14 & -6 &-3\\
+      -2 & -4 & 1 &-2\\
+      2&4&-2&-2
+    \end{bmatrix} \xrightarrow{{(R_2-7R_1)}\to{R_2}}
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & \frac{9}{2} &18\\
+      -2 & -4 & 1 &-2\\
+      2&4&-2&-2
+    \end{bmatrix}\\ \xrightarrow{{(R_3+2R_1)}\to{R_3}}&
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & \frac{9}{2} &18\\
+      0 & 0 & -2 &-8\\
+      2&4&-2&-2
+    \end{bmatrix} \xrightarrow{{(R_4-2R_1)}\to{R_4}}
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & \frac{9}{2} &18\\
+      0 & 0 & -2 &-8\\
+      0&0&-1&4
+    \end{bmatrix} \\ \xrightarrow{{\frac{2}{9}}R_2\to{R_2}}&
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & 1 &4\\
+      0 & 0 & -2 &-8\\
+      0&0&-1&4
+    \end{bmatrix} \xrightarrow{{(R_3+2R_2)}\to{R_3}}
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & 1 &4\\
+      0 & 0 & 0 &0\\
+      0&0&-1&4
+    \end{bmatrix}\\ \xrightarrow{{R_3}\leftrightarrow{R_4}}&
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & 1 &4\\
+      0&0&-1&4\\
+      0 & 0 & 0 &0
+    \end{bmatrix} \xrightarrow{{(R_3+R_2)}\to{R_3}}
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & 1 &4\\
+      0&0&0&8\\
+      0 & 0 & 0 &0
+    \end{bmatrix}\\ \xrightarrow{{\frac{1}{8}R_3}\to{R_3}}&
+    \begin{bmatrix}
+      1 & 2 & \frac{-3}{2} &-3\\
+      0 & 0 & 1 &4\\
+      0&0&0&1\\
+      0 & 0 & 0 &0
+    \end{bmatrix}
+\end{align*}
+Observe that the pivot columns of the REF matrix are the $1^{st}$, $2^{nd}$, and the $4^{th}$ column. Consequently, the set contains the $1^{st}$, the $2^{nd}$, and the $4^{th}$ columnns of matrix $A$:
+\[
+\left\{
+  \begin{bmatrix}
+    2 \\
+    7 \\
+    -2 \\
+    2
+  \end{bmatrix},
+  \begin{bmatrix}
+    -3\\
+    -6\\
+    1\\
+    -2
+  \end{bmatrix},
+  \begin{bmatrix}
+    -6\\
+    -3\\
+    -2\\
+    -2
+  \end{bmatrix}
+\right\}
+\]
+are the basis of the column space of $A$.
+\item[b)] The rank of the matrix $A$ = $dim(C(A))= 3.$
+\end{itemize}
 \subsubsection*{Problem 35}
+We keep applying the EROs till we reach the REF:
+\begin{align*}
+  A=\begin{bmatrix}
+    5 & 2 \\
+    3 & -1 \\
+    2 & 1
+  \end{bmatrix} \xrightarrow{{\frac{1}{5}R_1}\to{R_1}}&
+  \begin{bmatrix}
+    1 & \frac{2}{5} \\
+    3 & -1 \\
+    2 & 1
+  \end{bmatrix} \xrightarrow[(R_3-2R_1)\to R_3]{(R_2-3R_1)\to R_2}
+  \begin{bmatrix}
+    1 & \frac{2}{5} \\
+    0 & \frac{-11}{5}  \\
+    0 & \frac{1}{5}
+  \end{bmatrix}\\ \xrightarrow{{\frac{-5}{11}R_2}\to{R_2}}&
+  \begin{bmatrix}
+    1 & \frac{2}{5} \\
+    0 & 1  \\
+    0 & \frac{1}{5}
+  \end{bmatrix} \xrightarrow{{(R_3-\frac{1}{5}R_2)}\to{R_3}}
+  \begin{bmatrix}
+    1 & \frac{2}{5} \\
+    0 & 1  \\
+    0 & 0
+  \end{bmatrix} =B
+\end{align*}
+We know that $N(B)=N(A)$. And we get the system \[x+\frac{2}{5}y=0\\ y=0.\]
+This system clearly only has the trivial solution $(0,0)$. Hence, $N(A)={(0,0)}$ 
 \subsubsection*{Problem 42}
-
+Since we know that $A,B$ are row equivalent, we can obtain $B$ by applying EROs on $A$ and they have the same row space, rank, nullity.
+\begin{itemize}
+  \item [a)] We can see that $B$ is in the REF, and we know that the rank is the number of the pivot columnns and the nullity is the number of the non-pivot columns. It is clear that the $1^{st},2^{nd},4^{th}$ columns are pivot columns and the $3^{rd},5^{th}$ columns are the non-pivot columns. Hence, $rank(A)=3, nullity(A)=2$
+  \item [b)] Since $B$ is in REF we obtain the follwoing homogeneous system of linear equations 
+  \begin{align*}
+    x+z+l=0 \\ y-2z+3l=0\\ w-5l=0
+  \end{align*}
+  , the non-pivot columns corresponds to free variables, so we choose $z=s, l=t$ and get that $w=5t, y=2s-3t, x= -s-t.$ and that is the solution of the homogeneous system.
+  So we get that $N(A)=\left\{
+  \begin{bmatrix}
+    -s-t \\
+    2s-3t\\
+    s \\
+    5t\\
+    t
+  \end{bmatrix}: s,t \in \mathbb{R}
+\right\}$
+and for every vector $\vec{v} \in N(A)$ we have:
+\[\vec{v}= \begin{bmatrix}
+    -s-t \\
+    2s-3t\\
+    s \\
+    5t\\
+    t
+  \end{bmatrix}=\begin{bmatrix}
+    -s \\
+    2s\\
+    s \\
+    0\\
+    0
+  \end{bmatrix}+\begin{bmatrix}
+    -t \\
+    -3t\\
+     0\\
+    5t\\
+    t
+  \end{bmatrix}= s\begin{bmatrix}
+    -1 \\
+    2\\
+    1 \\
+    0\\
+    0
+  \end{bmatrix}+t\begin{bmatrix}
+    -1 \\
+    -3\\
+     0\\
+    5\\
+    1
+  \end{bmatrix}\]
+  Thus, every vector $\vec{v} \in N(A)$ can be obtained by a linear combination of vectors in the set
+  \[S=\left\{\begin{bmatrix}
+    -1 \\
+    2\\
+    1 \\
+    0\\
+    0
+  \end{bmatrix},\begin{bmatrix}
+    -1 \\
+    -3\\
+     0\\
+    5\\
+    1
+  \end{bmatrix}\right\}\]
+  So it is clearly a spanning set, it is also linearly independent as we have zeros in one vector that correspnds to numbers in the others, whihc implies we cannot get one by a linear combination of the other. Therefore, $S$ is a basis of $N(A)$
+  \item [c)] The basis of the row space is the set that contains the pivot rows of the REF matrix. Hence, the basis $T=\{(1,0,1,0,1), (0,1,-2,0,3),(0,0,0,1,-5)\}$.
+  \item [d)] The basis of the column space of $A$ is the set that contains the columns in $A$ that correspnds to the pivot columns in $B$. Hence, the basis \[W=\{(-2,1,3,1),(-5,3,11,7),(0,1,7,5)\}.\]
+  \item [e)] Since $dim(R(A))=3$, and the number of rows in $A$ is 4, then the rows of $A$ are not linearly independent.
+  \item [f)]\begin{itemize}
+    \item [i)] We know that this set is the basis of $C(A)$ from (d). And we know that a basis is linearly independent. Hence, the set is linearly independent.
+    \item [ii)] The set is linearly dependent as we can get $a_{3}=a_1-a_2.$
+    \item [iii)] Since we have zero in $a_3,a_1$ that correspnds to number in $a_5$, then we cannot get any of them as linear combination of the others. Hence, the set is linearly independent.
+  \end{itemize}
+\end{itemize}
 \end{document}

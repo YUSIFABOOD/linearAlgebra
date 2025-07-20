@@ -64,7 +64,12 @@
     colbacktitle=thmscol!40!white,
     colback=thmscol!20!white,
 }{thm}
-
+% Command for a simple theorem
+\NewDocumentCommand{\thm}{m+m}{
+    \begin{mytheorem}{#1}{}
+        #2
+    \end{mytheorem}
+}
 % --- 3. Define the proof environment style ---
 \newenvironment{thmpf}{
     {\noindent\textbf{Proof.}}
@@ -89,8 +94,8 @@
     \end{thmpf}
 }
 \title{linear Algebra Project}
-\author{Mohamed Ghazy, Yousef Abood}
-\date{July 2025}
+\author{Mohamed Ghazy, Yousef Abood  \\ ~ \\ The American University in Cairo \\}
+\date{Summer 2025}
 
 \begin{document}
 
@@ -125,6 +130,16 @@ Let $A$ be an $n \times n$ matrix, and let $A_{ij}$ be the submatrix obtained by
 The determinant is a function that assigns to every square matrix $A$ a real number denoted by $det(A)$ or $|A|$. For a $1 \times 1$ matrix we define $det([a])=a.$ The determinant of the matrix $A=[a_{ij}]$ of size $n \times n$ where $n \geq 2$ is the sum of the products of the first row with their corresponding cofactors.
 \[det(A)=\sum_{j=1}^{n} (-1)^{1+j}\ a_{1j} \ det(A_{1j})=\sum_{j=1}^{n} a_{1j}\ C_{1j}= a_{11}\ C_{11}+ a_{12}\ C_{12}+\dots + a_{1n}\ C_{1n}\].
 }
+\thm{}
+{
+Let $A$ be a square matrix of size $n\times n$. Then the sum of products of the $i^{th}$ row
+entries with their cofactors (called the cofactor expansion along the $i^{th}$ row) is
+equal to the determinant of $A$.
+\[det(A)=\sum_{j=1}^{n} a_{ij}\ C_{ij}= a_{i1}\ C_{i1}+ a_{i2}\ C_{i2}+\dots + a_{in}\ C_{in}\]
+Also, the sum of products of the $j^{th}$ column entries with their cofactors (called
+the cofactor expansion along the $j^{th}$ column) is equal to the determinant of $A$.
+\[det(A)=\sum_{i=1}^{n} a_{ij}\ C_{ij}= a_{1ju}\ C_{1j}+ a_{2j}\ C_{2j}+\dots + a_{nj}\ C_{nj}\].
+}
 
 \section{Code}
 
@@ -141,10 +156,8 @@ The program below leverages the C++ Standard Library to handle matrix data struc
 #include <stdexcept>
 #include <cmath>
 
-// Type alias for a matrix for cleaner code
 using Matrix = std::vector<std::vector<double>>;
 
-// --- Helper Functions ---
 void printMatrix(const std::string& label, const Matrix& M) {
     std::cout << "\n" << label << ":\n";
     for (const auto& row : M) {
@@ -156,7 +169,6 @@ void printMatrix(const std::string& label, const Matrix& M) {
     }
 }
 
-// --- Core Matrix Operations ---
 
 // Determinant of a 3x3 submatrix
 double determinant3x3(const Matrix& M) {
@@ -186,7 +198,7 @@ double determinant(const Matrix& A) {
     return det;
 }
 
-// Single function for Gauss-Jordan elimination on any matrix
+// function for Gauss-Jordan elimination 
 void gaussJordan(Matrix& M) {
     int rows = M.size();
     int cols = M[0].size();
@@ -216,14 +228,14 @@ void gaussJordan(Matrix& M) {
     }
 }
 
-// RREF function that uses the main Gauss-Jordan logic
+// RREF function that uses the Gauss-Jordan func
 Matrix rref(const Matrix& A) {
     Matrix R = A; // Make a copy
     gaussJordan(R);
     return R;
 }
 
-// Inverse function that also uses the main Gauss-Jordan logic
+// Inverse function that also uses the Gauss-Jordan fun
 Matrix inverse(const Matrix& A) {
     if (A.size() != A[0].size()) {
         throw std::invalid_argument("Matrix must be square to have an inverse.");
@@ -281,7 +293,6 @@ int main() {
     return 0;
 }
 \end{lstlisting}
-
 \subsection{Examples}
 The following examples demonstrate the program's output for an invertible matrix $M$ and a non-invertible matrix $N$.
 
@@ -296,8 +307,14 @@ M =
 0 & 0 & 0 & 1
 \end{bmatrix}
 \]
+The program correctly computes the RREF as the identity matrix $I_4$, a non-zero determinant, and the corresponding inverse matrix $M^{-1}$. The terminal output is shown in Figure~\ref{fig:output_m}.
 
-The program correctly computes the RREF as the identity matrix $I_4$, a non-zero determinant, and the corresponding inverse matrix $M^{-1}$. The terminal output is shown in Figure .....
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{f1.png}
+    \caption{Program output for the invertible matrix M.}
+    \label{fig:output_m}
+\end{figure}
 
 \subsubsection{Example 2: Non-Invertible Matrix N}
 Consider the non-invertible matrix $N$, where the third row is a linear combination of the first two ($R_3 = R_1 + R_2$):
@@ -310,7 +327,15 @@ N =
 9 & 10 & 11 & 12
 \end{bmatrix}
 \]
-The program's output, shown in Figure .... , confirms that $N$ is singular. The RREF contains a zero row, the determinant is zero, and the program reports that the matrix is not invertible.
+The program's output, shown in Figure 2, confirms that $N$ is singular. The RREF contains a zero row, the determinant is zero, and the program reports that the matrix is not invertible.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{f2.png}
+    \caption{Program output for the non-invertible matrix N.}
+    \label{fig:enter-label}
+\end{figure}
+
 
 \section{Adjoint of a matrix}
 \defn{The Adjoint of a Matrix}{Adjoint}
@@ -324,6 +349,176 @@ The adjoint is also known as adjugate or adjunct. In this section, you need to d
 For any $n \times n$ matrix $A$ we have that: \[A\ adj(A)= det(A)\ I_n\]
 }
 {
+Let $A=[a_{ij}]$ be an $n \times n$ square matrix. By definition of matrix multiplication, we define $A\ adj(A)=S$, but we know that the adjoint of $A$ is the transpose of the cofactor matrix of $A$ and we define it by $D=[d_{ij}]$. \[\text{Thus, }[s_{ij}]=\sum_{k=1}^na_{ik} \ d_{kj}=\sum_{k=1}^na_{ik} \ C_{jk}.\]
+We notice that we have two cases for the values of $i,j$:\\
 
-}
+\textbf{Case 1} $(i=j)$: This case is for the main diagonal entries of the product matrix. Then we get \[[s_{ii}]=\sum_{k=1}^na_{ik} \ C_{ik}\]
+By definition of matrix multiplication and cofactor expansion, we see that $s_{ii} =\sum_{k=1}^na_{ik} \ C_{ik}= det(A)$, in other words, every main diagonal entry of the adjoint matrix of $A$ is the determinant of $A$.\\
+
+\textbf{Case 2} $(i\neq j)$: This case is for the off-diagonal entries.\[[s_{ij}]=\sum_{k=1}^na_{ik} \ C_{jk}\]
+We construct a matrix $B$ by copying the matrix $A$ and replacing the $j^{th}$ row of $B$ by a copy from the $i^{th}$ row of $A$. So, the $i^{th}$ and $j^{th}$ rows of $B$ are identical. Thus, $s_{ij}=\sum_{k=1}^na_{ik} \ C_{jk}=\sum_{k=1}^na_{jk} \ C_{jk}=det(B).$ But we know that $B$ has two identical rows, so its determinant is zero. Hence, $s_{ij}=0$, where $i \neq j.$
+\\
+Therefore, \[A \ adj(A)= \begin{bmatrix}
+    det(A)&0&0&\dots&0\\
+    0&det(A)&0&\dots&0\\
+    0&0&det(A)&\dots&0\\
+    \vdots&\vdots&\vdots&\ddots&\vdots\\
+    0&0&0&\dots&det(A)
+\end{bmatrix} = det(A) \begin{bmatrix}
+    1&0&0&\dots&0\\
+    0&1&0&\dots&0\\
+    0&0&1&\dots&0\\
+    \vdots&\vdots&\vdots&\ddots&\vdots\\
+    0&0&0&\dots&1
+\end{bmatrix}=det(A)I_n, \]
+which satisfies the proof.
+} \newpage
+\section{Verification of the Theorem}
+
+We now verify the theorem
+\[
+A\,\operatorname{adj}(A) = \det(A)\,I_n
+\]
+for two concrete examples: an invertible matrix $M$ and a singular (non-invertible) matrix $N$.
+
+\subsection*{Example 1: Invertible matrix $M$}
+
+Consider the invertible matrix
+\[
+M =
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 1 & 2 & 3 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\]
+
+\paragraph{Step 1: Determinant of $M$.}
+Since $M$ is upper triangular, the determinant is the product of the diagonal entries:
+\[
+\det(M) = 1 \times 1 \times 1 \times 1 = 1.
+\]
+
+\paragraph{Step 2: Cofactor and Adjoint of $M$.}
+The cofactor matrix $cof(M)$ is computed as:
+\[
+cof(M) =
+\begin{bmatrix}
+1 & 0 & 0 & 0\\
+-2 & 1 & 0 & 0\\
+1 & -2 & 1 & 0\\
+0 & 1 & -2 & 1
+\end{bmatrix}.
+\]
+
+Taking its transpose gives the adjoint:
+\[
+\operatorname{adj}(M) = cof(M)^T =
+\begin{bmatrix}
+1 & -2 & 1 & 0\\
+0 & 1 & -2 & 1\\
+0 & 0 & 1 & -2\\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\]
+
+\paragraph{Step 3: Verifying the theorem.}
+Now multiply:
+\[
+M\,\operatorname{adj}(M)=
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+0 & 1 & 2 & 3 \\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & -2 & 1 & 0\\
+0 & 1 & -2 & 1\\
+0 & 0 & 1 & -2\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+= \det(M)\,I_4.
+\]
+
+Thus the theorem holds for $M$.
+
+\bigskip
+\subsection*{Example 2: Singular matrix $N$}
+
+Consider the singular matrix
+\[
+N =
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
+6 & 8 & 10 & 12 \\
+9 & 10 & 11 & 12
+\end{bmatrix}.
+\]
+
+Notice that the third row is a linear combination of the first two ($R_3 = R_1 + R_2$), so the rows are linearly dependent. Hence:
+\[
+\det(N) = 0.
+\]
+
+By the theorem:
+\[
+N\,\operatorname{adj}(N) = \det(N)\,I_4 = 0_{4\times4}.
+\]
+
+This confirms the result for a singular matrix.
+
+\bigskip
+\subsection*{Formula for the Inverse using the Adjoint}
+
+If $A$ is invertible (i.e., $\det(A)\neq 0$), the theorem gives:
+\[
+A\,\operatorname{adj}(A) = \det(A)\,I_n.
+\]
+Multiplying both sides by $\dfrac{1}{\det(A)}$:
+\[
+A \left( \frac{\operatorname{adj}(A)}{\det(A)} \right) = I_n.
+\]
+Thus,
+\[
+\boxed{A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}.}
+\]
+
+\subsection*{Example: Computing $M^{-1}$}
+
+For the invertible matrix $M$, we have $\det(M)=1$ and:
+\[
+cof(M) =
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+-2 & 1 & 0 & 0 \\
+1 & -2 & 1 & 0 \\
+0 & 1 & -2 & 1
+\end{bmatrix},\quad
+\operatorname{adj}(M) = cof(M)^T =
+\begin{bmatrix}
+1 & -2 & 1 & 0 \\
+0 & 1 & -2 & 1 \\
+0 & 0 & 1 & -2 \\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\]
+
+Therefore:
+\[
+M^{-1} = \frac{\operatorname{adj}(M)}{\det(M)} = \operatorname{adj}(M).
+\]
+
+This matches the inverse computed by our algorithm (see Figure~\ref{fig:output_m}).
+
 \end{document}
+

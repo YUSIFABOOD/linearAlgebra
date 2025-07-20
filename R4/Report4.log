@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  20 JUL 2025 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.6) (preloaded format=pdflatex 2025.6.22)  20 JUL 2025 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/yusif/Uni/Summer 2025/linearAlgebra/A9/Assignment9.tex"
-(/home/yusif/Uni/Summer 2025/linearAlgebra/A9/Assignment9.tex
+**"/home/yusif/Uni/Summer 2025/linearAlgebra/R4/Report4.tex"
+(/home/yusif/Uni/Summer 2025/linearAlgebra/R4/Report4.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
 (/home/yusif/.miktex/texmfs/install/tex/latex/base/article.cls
@@ -551,23 +551,27 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (Assignment9.aux)
-\openout1 = `Assignment9.aux'.
+)) (/home/yusif/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
+) (Report4.aux)
+\openout1 = `Report4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (/home/yusif/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count345
@@ -575,12 +579,12 @@ LaTeX Font Info:    ... okay on input line 24.
 \scratchbox=\box115
 \nofMPsegments=\count346
 \nofMParguments=\count347
-\everyMPshowfont=\toks45
+\everyMPshowfont=\toks47
 \MPscratchCnt=\count348
 \MPscratchDim=\dimen305
 \MPnumerator=\count349
 \makeMPintoPDFobject=\count350
-\everyMPtoPDFconversion=\toks46
+\everyMPtoPDFconversion=\toks48
 ) (/home/yusif/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/home/yusif/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
@@ -619,15 +623,15 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=452.9679pt
-* \textheight=700.50687pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -645,76 +649,35 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 (/home/yusif/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  (/home/yusif/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (15.51012pt too wide) detected at line 168
-[]
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5] (Assignment9.aux)
+{/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] (Report4.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18590 strings out of 468220
- 369218 string characters out of 5437745
- 887836 words of memory out of 5000000
- 46781 multiletter control sequences out of 15000+600000
- 634982 words of font info for 72 fonts, out of 8000000 for 9000
+ 18566 strings out of 468220
+ 368833 string characters out of 5437745
+ 840701 words of memory out of 5000000
+ 46762 multiletter control sequences out of 15000+600000
+ 630021 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,87p,460b,402s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Assignment9.pdf (5 pages, 141742 bytes).
+ 84i,7n,87p,511b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Report4.pdf (1 page, 24939 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 19 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

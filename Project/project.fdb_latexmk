@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1752881264.12187 "/home/yusif/Uni/Summer 2025/linearAlgebra/Project/project.tex" "project.pdf" "project" 1752881265.02964 0
+["pdflatex"] 1752956230.24506 "/home/yusif/Uni/Summer 2025/linearAlgebra/Project/project.tex" "project.pdf" "project" 1752956230.88481 0
   "/home/yusif/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1751536499.05228 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "/home/yusif/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1750578422.31265 13230366 d492790498142d2c1e4612248198d480 ""
   "/home/yusif/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1750439097.01981 1004 54797486969f23fa377b128694d548df ""
@@ -31,13 +31,16 @@
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1750439097.02915 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmitt10.pfb" 1750439097.03092 26057 fad158094905eaf20f4ae3782af0c45c ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1750439097.03134 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1750439097.03175 36741 fa121aac0049305630cf160b86157ee4 ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1750439097.03323 36281 c355509802a035cadc5f15869451dcee ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1750439097.0352 35752 024fb6c41858982481f6968b5fc26508 ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1750439097.0356 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1750439097.03602 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1750439097.0374 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1750439097.0378 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1750439097.04541 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1750439097.04668 32716 08e384dc442464e7285e891af9f45947 ""
+  "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1750439097.04723 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1750439097.05185 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1750439097.05261 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
   "/home/yusif/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1750439097.07015 31764 459c573c03a4949a528c2cc7f557e217 ""
@@ -189,9 +192,11 @@
   "/home/yusif/.miktex/texmfs/install/tex/latex/tools/verbatim.sty" 1750577617.80759 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "/home/yusif/.miktex/texmfs/install/tex/latex/trimspaces/trimspaces.sty" 1750439124.76957 1380 971a51b00a14503ddf754cab24c3f209 ""
   "/home/yusif/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty" 1750439125.45563 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "/home/yusif/Uni/Summer 2025/linearAlgebra/Project/project.tex" 1752881262.92522 10917 63738efbdc32e24f6a8b9aef213f87b7 ""
-  "project.aux" 1752881264.83417 1367 9dd429c61da14778fde3bf80b8c029c0 "pdflatex"
-  "project.tex" 1752881262.92522 10917 63738efbdc32e24f6a8b9aef213f87b7 ""
+  "/home/yusif/Uni/Summer 2025/linearAlgebra/Project/project.tex" 1752956180.87837 16301 b1a9c095416988113927b76e1575c9c8 ""
+  "f1.png" 1752956224.9769 18226 c5f2f659a2129bcff728791b62d9d7dc ""
+  "f2.png" 1752956218.21471 16641 a4f4a05b65f5246a6a4b10ebf4716946 ""
+  "project.aux" 1752956230.78583 2255 9ee96dcc2c2e176dcb9bd9ae8e9f479a "pdflatex"
+  "project.tex" 1752956180.87837 16301 b1a9c095416988113927b76e1575c9c8 ""
   (generated)
   "project.aux"
   "project.log"
