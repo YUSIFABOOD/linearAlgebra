@@ -1,0 +1,211 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx, setspace, array, xcolor, mathtools, contour, tikz, amsthm, setspace, amsmath,amsfonts,amssymb, subcaption, fancyhdr, lipsum,multicol}
+\geometry{a4paper, margin=1in}
+% ===== Define custom colors =====
+\definecolor{defscol}{HTML}{d8f5d1}
+
+% ===== Define theorem-like environment for definitions =====
+\newtcbtheorem[]{mydefinition}{Definition}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+     colbacktitle=defscol!60!white,  % darker green for title
+    colback=defscol!30!white,       % lighter green for body
+    % width=0.8\textwidth,            % 80% of the page width
+    % halign=center,                  % center the entire box
+    boxsep=5pt        
+}{defn}
+
+% ===== Corrected Shortcut Commands =====
+
+% A command for a standard definition.
+% Usage: \defn{Title}{label-key}{Content...}
+\NewDocumentCommand{\defn}{m m +m}{
+    \begin{mydefinition}{#1}{#2}
+        #3
+    \end{mydefinition}
+}
+
+% A command for a definition with an extra note in the title.
+% The note is placed in parentheses after the title.
+% Usage: \defnr{Title}{Note}{label-key}{Content...}
+\NewDocumentCommand{\defnr}{m m m +m}{
+    \begin{mydefinition}{#1 (#2)}{#3}
+        #4
+    \end{mydefinition}
+}
+% =======================================================
+% Code for Theorems with Proofs
+% =======================================================
+
+% Required Packages (make sure these are in your preamble)
+\usepackage{xparse}
+
+% --- 1. Define a color for theorems ---
+\definecolor{thmscol}{HTML}{d7e6ec} % A light blue color
+
+% --- 2. Define the theorem environment style ---
+\newtcbtheorem[number within=section]{mytheorem}{Theorem}
+{
+    enhanced,
+    frame hidden,
+    titlerule=0mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
+    fonttitle=\bfseries\large,
+    coltitle=black,
+    colbacktitle=thmscol!40!white,
+    colback=thmscol!20!white,
+}{thm}
+% Command for a simple theorem
+\NewDocumentCommand{\thm}{m+m}{
+    \begin{mytheorem}{#1}{}
+        #2
+    \end{mytheorem}
+}
+% --- 3. Define the proof environment style ---
+\newenvironment{thmpf}{
+    {\noindent\textbf{Proof.}}
+    \tcolorbox[blanker, breakable, left=5mm, parbox=false,
+    before upper={\parindent15pt},
+    after skip=10pt,
+    borderline west={1mm}{0pt}{thmscol!60!white}]
+}{
+    % This adds the black square at the end of the proof
+    \textcolor{thmscol!60!black}{\hbox{}\nobreak\hfill$\blacksquare$}
+    \endtcolorbox
+}
+
+% --- 4. Create the all-in-one command for a theorem with its proof ---
+% Usage: \thmp{Title}{label}{Theorem Content}{Proof Content}
+\NewDocumentCommand{\thmp}{m m +m +m}{
+    \begin{mytheorem}{#1}{#2}
+        #3
+    \end{mytheorem}
+    \begin{thmpf}
+        #4
+    \end{thmpf}
+}
+\renewcommand{\thesection}{$\diamond$}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Linear Algebra}
+\title{Linear Algebra}
+\author{Report 5\\ \\ Yousef A. Abood\\ \\ ID: 900248250}
+\date{Jully 2025}
+\setlength{\parindent}{0pt}
+\singlespacing
+\parskip=1mm
+\onehalfspacing
+\begin{document}
+\maketitle
+\noindent\makebox[\linewidth]{\rule{15cm}{0.4pt}}
+\defn{Linear transformation}{lt}{
+Let $W,V$ be two vector spaces and $T$ is a function that its domain is $V$ and its codomain is $W$. We call $T$ a linear transformation iff for any $c \in \mathbb{R}$ and for every vector $\vec{v}, \vec{u} \in V$ the following conditions hold:
+    \begin{itemize}
+        \item $T(\vec{v}+\vec{u})= T(\vec{v})+T(\vec{u})$
+        \item $T(c\vec{v})=cT(\vec{v}).$
+    \end{itemize}
+} 
+
+\subsubsection*{Example}
+The linear transformation $T:V \to V$ such that $T(x,y)=(x+y,3x-7y).$ We see it is a linear transformation as it is closed under vector addition and scalar multiplication as follows
+Pick two vectors $\vec{u}=(x,y), \vec{v}=(a,b) \in V$ and scalar $c \in \mathbb{R}$, we see
+\begin{align*}
+    T(\vec{u}+\vec{v})&=T((x+a,y+b))\\
+    &=(x+a+y+b, 3x+3a-7y-7b)\\
+     &=(x+y,3x-7y)+(a+b,3a-7b)=T(\vec{u})+T(\vec{v})\\
+\\
+    T(c\vec{v})&=T((ca,cb))=(ca+cb, 3ca-7cb) \\ 
+    &= (c(a+b), c(3a-7b))=c(a+b, 3a-7b)=cT(\vec{v}).
+\end{align*}
+
+\subsubsection*{\textcolor{red}{Non-example}}
+The function $T(x,y)=(x+1,y-1)$ is not a linear transformation as it is not closed under vector addition. We pick two vectors $\vec{v}=(x,y), \vec{u}=(a,b) \in V$ and see
+\[T(\vec{v}+ \vec{u})= T(a+x,b+y)=(a+b+1, b+y-1)\]
+Which clearly does not satisfy the closure of addition.
+\defn{Kernel of a linear transformation}{ker}{
+Let $T: V \to W$ be a linear transformation. We define the kernel of the linear transformation as the set of all vectors in $V$ that are mapped to the zero vector of $W$. that is, \[kernel(T)=\{\vec{v}\in V| T(\vec{v})=\vec{\textbf{0}}_W\}\]
+}
+\subsubsection*{Example}
+Let $T: \mathbb{R}^3\to \mathbb{R}^3$ be the projection of a vector into the $yz-plane$, such that $T(x,y,z)=(0,y,z).$
+Then $ker(T) = \{(t,0,0)| t \in \mathbb{R}.\}$ 
+
+\subsubsection*{\textcolor{red}{Non-example}}
+A non example is any vector in $V$ that its image is not $\vec{\textbf{0}}_W$. An example is $S=\{(1,1,1)\}$, where $T(1,1,1)=(0,1,1).$
+\defn{Vector space isomorphism}{iso}{
+Let $V,W$ be two vector spaces. An \textit{isomorphism} from $V$ to $W$ is a bijective linear transformation $T: V \to W.$ We say $V$ is isomorphic to $W$ iff we can find at least one isomorphism from $V$ to $W$ and we write that $V \cong W.$
+}
+
+\subsubsection*{Example}
+The vector spaces
+\[R^5\cong M_{5\times 1} \cong M_{1 \times 5} \cong P_4\]
+are all isomorphic to each other since they all are of dimension 5.
+
+\subsubsection*{\textcolor{red}{Non-example}}
+The vector spaces
+\[R^3 \ncong M_{2 \times 2}\]
+are not isomorphic since they are of different dimensions, the first of dimension 3 and the latter of dimension 4.
+\defn{Eigenvector of a matrix}{eigen}{
+A nonzero vector $\vec{x} \in R^n$ is called an eigenvector of a square matrix $A$ of size
+$n \times n$ if and only if there exists a real number $\lambda \in R$ such that
+\[A \vec{x} = \lambda \vec{x}\].
+The number $\lambda$ is called an eigenvalue of $A$, and we say in such situation that
+$\vec{x}$ is an eigenvector of $A$ corresponding to the eigenvalue $\lambda$.
+}
+\subsubsection*{Example}
+let $A$ be the $2 \times 2$ matrix
+\[A=\begin{bmatrix}
+  1 & 4 \\
+  5 & 0
+\end{bmatrix}\]
+An eigenvector is 
+\[\vec{v}=\begin{bmatrix}
+    1\\
+    1
+\end{bmatrix}\]
+As we can see that 
+\[A\vec{v}=\begin{bmatrix}
+  1 & 4 \\
+  5 & 0
+\end{bmatrix}\begin{bmatrix}
+    1\\
+    1
+\end{bmatrix}=\begin{bmatrix}
+    5\\
+    5
+\end{bmatrix}=5\begin{bmatrix}
+    1\\
+    1
+\end{bmatrix}=5 \vec{v}.\]
+\subsubsection*{\textcolor{red}{Non-example}}
+For the previous matrix $A$ let \[\vec{v}=\begin{bmatrix}
+    1\\
+    2
+\end{bmatrix}\]
+And observe
+\[A\vec{v}=\begin{bmatrix}
+  1 & 4 \\
+  5 & 0
+\end{bmatrix}\begin{bmatrix}
+    1\\
+    2
+\end{bmatrix}=\begin{bmatrix}
+    9\\
+    5
+\end{bmatrix},\]
+which is not an eigenvector as there is no $\lambda \in \mathbb{R}$ such that $A\vec{v}=\lambda \vec{v.}$
+\end{document}
